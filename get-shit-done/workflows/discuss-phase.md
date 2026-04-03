@@ -811,7 +811,7 @@ Write after each area:
 }
 ```
 
-This is a structured checkpoint, not the final CONTEXT.md — the `write_context` step still produces the canonical output. But if the session dies, the next `gsd:discuss-phase` invocation can detect this checkpoint and offer to resume from it instead of starting from scratch.
+This is a structured checkpoint, not the final CONTEXT.md — the `write_context` step still produces the canonical output. But if the session dies, the next `/gsd-discuss-phase` invocation can detect this checkpoint and offer to resume from it instead of starting from scratch.
 
 **On session resume:** In the `check_existing` step, also check for `*-DISCUSS-CHECKPOINT.json`. If found and no CONTEXT.md exists:
 - Display: "Found interrupted discussion checkpoint ({N} areas completed). Resume from checkpoint?"
@@ -1101,7 +1101,7 @@ Context captured. Launching plan-phase...
 
 Launch plan-phase using the Skill tool to avoid nested Task sessions (which cause runtime freezes due to deep agent nesting — see #686):
 ```
-Skill(skill="gsd:plan-phase", args="${PHASE} --auto ${GSD_WS}")
+Skill(skill="gsd-plan-phase", args="${PHASE} --auto ${GSD_WS}")
 ```
 
 This keeps the auto-advance chain flat — discuss, plan, and execute all run at the same nesting level rather than spawning increasingly deep Task agents.
