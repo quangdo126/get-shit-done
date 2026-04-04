@@ -1117,10 +1117,7 @@ This keeps the auto-advance chain flat — discuss, plan, and execute all run at
 
   /clear then:
 
-  Next: /gsd:discuss-phase ${NEXT_PHASE} ${WAS_CHAIN ? "--chain" : "--auto"} ${GSD_WS}
-
   Next: /gsd-discuss-phase ${NEXT_PHASE} ${WAS_CHAIN ? "--chain" : "--auto"} ${GSD_WS}
-  <sub>/clear first → fresh context window</sub>
   ```
 - **PLANNING COMPLETE** → Planning done, execution didn't complete:
   ```
