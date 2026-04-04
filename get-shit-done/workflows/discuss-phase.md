@@ -975,9 +975,9 @@ Created: .planning/phases/${PADDED_PHASE}-${SLUG}/${PADDED_PHASE}-CONTEXT.md
 
 **Phase ${PHASE}: [Name]** — [Goal from ROADMAP.md]
 
-`/gsd-plan-phase ${PHASE} ${GSD_WS}`
+`/clear` then:
 
-<sub>`/clear` first → fresh context window</sub>
+`/gsd-plan-phase ${PHASE} ${GSD_WS}`
 
 ---
 
@@ -1114,6 +1114,10 @@ This keeps the auto-advance chain flat — discuss, plan, and execute all run at
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   Auto-advance pipeline finished: discuss → plan → execute
+
+  /clear then:
+
+  Next: /gsd:discuss-phase ${NEXT_PHASE} ${WAS_CHAIN ? "--chain" : "--auto"} ${GSD_WS}
 
   Next: /gsd-discuss-phase ${NEXT_PHASE} ${WAS_CHAIN ? "--chain" : "--auto"} ${GSD_WS}
   <sub>/clear first → fresh context window</sub>
